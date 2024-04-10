@@ -1,0 +1,86 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+main {
+  text-align: center;
+  vertical-align: center;
+  line-height: 100vh
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.numsel {
+  @extend .square;
+  background: #fee;
+  border-radius: 3px;
+  font-size: 20px;
+  border: 1px solid #999;
+}
+
+.selected{
+  background: #9f9;
+}
+
+.disabled {
+  background: #ccc;7
+  color: gray;
+}
+
+.subsquare {
+  float: left;
+  border: 2px solid #23f;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+}
+
+.subsquare:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+@keyframes blink-error{
+  0% {
+    background: #f00;
+  }
+  50% {
+    background: #fff;
+  }
+  100% {
+    background: #f00;
+  }
+}
+
+.error {
+  animation: blink-error 1s;
+}
